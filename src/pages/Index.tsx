@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { StoreProvider } from '@/lib/store';
+import { Carousel } from '@/components/Carousel';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
-import ContactSection from '@/components/ContactSection';
+import Institucional from '@/sections/Institucional';
+import Servicos from '@/sections/Servicos';
+import Produtos from '@/sections/Produtos';
+import Contato from '@/sections/Contato';
 import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
 
@@ -28,9 +31,12 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         <Header onQuoteClick={() => handleQuoteClick()} />
         <main>
+          <Carousel />
           <HeroSection onQuoteClick={() => handleQuoteClick()} />
-          <ServicesSection onQuoteClick={handleQuoteClick} />
-          <ContactSection />
+          <Institucional />
+          <Servicos onQuoteClick={handleQuoteClick} />
+          <Produtos onQuoteClick={handleQuoteClick} />
+          <Contato />
         </main>
         <Footer />
         <QuoteModal 
