@@ -9,7 +9,7 @@ export default function Contato() {
   const { brand } = useStore();
 
   return (
-    <section id="contato" className="section-spacing bg-background">
+    <section id="contato" className="section-spacing bg-background scroll-mt-24">
       <div className="container-industrial">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

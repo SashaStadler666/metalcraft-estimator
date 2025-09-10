@@ -1,32 +1,14 @@
 import * as React from "react"
+import siteContent from '@/content/site.json'
+import { Button } from '@/components/ui/button'
 
-type Slide = {
-  title: string
-  subtitle: string
-  cta?: { label: string; href: string; kind?: "primary" | "secondary" }
-  image?: string // opcional, se quiser usar imagens reais
+interface CarouselProps {
+  onQuoteClick?: () => void;
 }
 
-const slides: Slide[] = [
-  {
-    title: "Corte a laser de precisão",
-    subtitle: "Qualidade industrial em inox, carbono e alumínio.",
-    cta: { label: "Solicite Orçamento", href: "#contato", kind: "primary" },
-  },
-  {
-    title: "Solda & Dobra profissionais",
-    subtitle: "Estruturas duráveis com acabamento superior.",
-    cta: { label: "Ver Serviços", href: "#servicos", kind: "secondary" },
-  },
-  {
-    title: "Fabricação sob medida",
-    subtitle: "Do esboço ao produto final, com repetibilidade CNC.",
-    cta: { label: "Ver Produtos", href: "#produtos", kind: "secondary" },
-  },
-]
-
-export function Carousel() {
+export function Carousel({ onQuoteClick }: CarouselProps) {
   const [idx, setIdx] = React.useState(0)
+  const slides = siteContent.slides
   const total = slides.length
   const go = (n: number) => setIdx((p) => (n + total) % total)
   const next = () => go(idx + 1)
@@ -52,64 +34,73 @@ export function Carousel() {
   return (
     <section
       id="home"
-      className="container scroll-mt-24 mt-8"
+      className="relative min-h-[380px] max-h-[720px] h-[60vh] overflow-hidden scroll-mt-24"
       aria-roledescription="carrossel"
     >
       <div
-        className="relative overflow-hidden rounded-3xl border border-black/10 bg-white min-h-[320px]"
+        className="relative w-full h-full bg-gradient-hero"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
         <div
-          className="grid"
+          className="grid h-full"
           style={{
             gridTemplateColumns: `repeat(${total}, 100%)`,
             transform: `translateX(-${idx * 100}%)`,
             transition: "transform .5s ease",
           }}
         >
-          {slides.map((sl, i) => (
-            <div
-              key={i}
-              className="p-7 md:p-10 grid gap-8 md:gap-12 md:grid-cols-2 items-center"
-            >
-              <div>
-                <h1 className="m-0 text-3xl md:text-5xl leading-tight">
-                  {sl.title}
-                </h1>
-                <p className="mt-2 text-lg text-black/70 max-w-xl">
-                  {sl.subtitle}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  {sl.cta && (
-                    <a
-                      href={sl.cta.href}
-                      className={
-                        sl.cta.kind === "secondary"
-                          ? "inline-flex items-center justify-center rounded-xl border border-black/10 bg-white px-4 py-3 font-semibold"
-                          : "inline-flex items-center justify-center rounded-xl bg-[#FF2E3E] text-white px-4 py-3 font-semibold shadow-lg"
-                      }
-                    >
-                      {sl.cta.label}
-                    </a>
-                  )}
-                  <a
-                    href="https://wa.me/5541988511192?text=Olá,%20gostaria%20de%20um%20orçamento."
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-xl border border-[#1E3AFF] text-[#1E3AFF] bg-white px-4 py-3 font-semibold"
-                  >
-                    WhatsApp
-                  </a>
+          {slides.map((slide, i) => (
+            <div key={i} className="flex items-center justify-center h-full">
+              <div className="container-industrial">
+                <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
+                  <div className="text-white">
+                    <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                      {slide.title}
+                    </h1>
+                    <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-xl">
+                      {slide.subtitle}
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                      {slide.cta && (
+                        <Button
+                          variant={slide.cta.variant === "primary" ? "secondary" : "outline"}
+                          size="lg"
+                          asChild
+                          className="text-lg px-8 py-4 h-auto"
+                        >
+                          <a href={slide.cta.href}>
+                            {slide.cta.label}
+                          </a>
+                        </Button>
+                      )}
+                      <Button
+                        variant="whatsapp"
+                        size="lg"
+                        asChild
+                        className="text-lg px-8 py-4 h-auto"
+                      >
+                        <a
+                          href={`https://wa.me/${siteContent.brand.whatsapp}?text=${encodeURIComponent(siteContent.contact.whatsappText)}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          WhatsApp
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="hidden md:block">
+                    <div
+                      className={`min-h-[300px] rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 ${
+                        i % 2
+                          ? "bg-gradient-to-br from-white/20 to-white/5"
+                          : "bg-gradient-to-tl from-accent/20 to-primary/20"
+                      }`}
+                    />
+                  </div>
                 </div>
               </div>
-              <div
-                className={`min-h-[240px] rounded-2xl border border-black/10 ${
-                  i % 2
-                    ? "bg-[#F3F5F8]"
-                    : "bg-[radial-gradient(1200px_500px_at_85%_10%,rgba(30,58,255,.08),transparent),radial-gradient(800px_300px_at_10%_35%,rgba(255,46,62,.08),transparent)]"
-                }`}
-              />
             </div>
           ))}
         </div>
@@ -118,27 +109,27 @@ export function Carousel() {
         <button
           aria-label="Anterior"
           onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 rounded-xl border border-black/10 bg-white/90 px-3 py-2 backdrop-blur"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-colors flex items-center justify-center text-xl font-bold"
         >
           ‹
         </button>
         <button
           aria-label="Próximo"
           onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 rounded-xl border border-black/10 bg-white/90 px-3 py-2 backdrop-blur"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 transition-colors flex items-center justify-center text-xl font-bold"
         >
           ›
         </button>
 
         {/* Dots */}
-        <div className="absolute inset-x-0 bottom-3 flex justify-center gap-2">
+        <div className="absolute inset-x-0 bottom-6 flex justify-center gap-3">
           {slides.map((_, i) => (
             <button
               key={i}
               aria-label={`Ir para slide ${i + 1}`}
               onClick={() => setIdx(i)}
-              className={`h-2.5 w-2.5 rounded-full ${
-                idx === i ? "bg-[#1E3AFF]" : "bg-black/20"
+              className={`h-3 w-3 rounded-full transition-all ${
+                idx === i ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
               }`}
             />
           ))}

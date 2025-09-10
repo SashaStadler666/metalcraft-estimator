@@ -8,6 +8,8 @@ interface ProdutosSectionProps {
   onQuoteClick: (product: string) => void;
 }
 
+import siteContent from '@/content/site.json';
+
 export default function Produtos({ onQuoteClick }: ProdutosSectionProps) {
   const products = [
     {
@@ -42,41 +44,14 @@ export default function Produtos({ onQuoteClick }: ProdutosSectionProps) {
     }
   ];
 
-  const showcaseItems = [
-    {
-      title: 'Chapas Perfuradas',
-      description: 'Perfurações padronizadas ou customizadas',
-      image: '🔘'
-    },
-    {
-      title: 'Flanges e Conexões',
-      description: 'Para sistemas hidráulicos e pneumáticos',
-      image: '⚙️'
-    },
-    {
-      title: 'Componentes Decorativos',
-      description: 'Para arquitetura e design industrial',
-      image: '✨'
-    },
-    {
-      title: 'Peças de Reposição',
-      description: 'Fabricação de peças para manutenção',
-      image: '🔧'
-    },
-    {
-      title: 'Gabinetes Metálicos',
-      description: 'Para painéis elétricos e equipamentos',
-      image: '📦'
-    },
-    {
-      title: 'Suportes e Bases',
-      description: 'Para máquinas e equipamentos industriais',
-      image: '🏗️'
-    }
-  ];
+  const showcaseItems = siteContent.products.map((product, index) => ({
+    title: product.name,
+    description: `Categoria: ${product.category}`,
+    image: ['🔘', '⚙️', '✨', '🔧', '📦', '🏗️'][index % 6]
+  }));
 
   return (
-    <section id="produtos" className="section-spacing bg-background">
+    <section id="produtos" className="section-spacing bg-background scroll-mt-24">
       <div className="container-industrial">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

@@ -1,0 +1,83 @@
+{
+  "brand": {
+    "name": "JJGans Metais e Serviços",
+    "phone": "+55 41 98851-1192",
+    "email": "jjgans@hotmail.com",
+    "address": "BR 277, KM 105, 8751 – Vila Nova – Campo Largo – PR",
+    "whatsapp": "5541988511192",
+    "tagline": "Precisão em Metais"
+  },
+  "navigation": {
+    "items": [
+      { "id": "home", "label": "Home", "href": "#home" },
+      { "id": "institucional", "label": "Institucional", "href": "#institucional" },
+      { "id": "servicos", "label": "Serviços", "href": "#servicos" },
+      { "id": "produtos", "label": "Produtos", "href": "#produtos" },
+      { "id": "contato", "label": "Contato", "href": "#contato" }
+    ]
+  },
+  "slides": [
+    {
+      "title": "Corte a laser de precisão",
+      "subtitle": "Inox, carbono e alumínio com repetibilidade CNC.",
+      "cta": { "label": "Solicitar orçamento", "href": "#contato", "variant": "primary" },
+      "image": null
+    },
+    {
+      "title": "Solda & Dobra profissionais",
+      "subtitle": "Estruturas duráveis e acabamento superior.",
+      "cta": { "label": "Ver serviços", "href": "#servicos", "variant": "secondary" },
+      "image": null
+    },
+    {
+      "title": "Fabricação sob medida",
+      "subtitle": "Do esboço ao produto final, com inspeção dimensional.",
+      "cta": { "label": "Produtos", "href": "#produtos", "variant": "secondary" },
+      "image": null
+    }
+  ],
+  "institucional": {
+    "title": "Institucional",
+    "paragraphs": [
+      "Somos especialistas em corte a laser de fibra, solda, dobra e fabricação de peças sob medida.",
+      "Alinhamos repetibilidade CNC, prazos competitivos e atendimento próximo para os segmentos industrial, residencial e comercial."
+    ]
+  },
+  "services": [
+    { 
+      "id": "laser-cutting",
+      "name": "Corte a Laser",
+      "title": "Corte a laser de fibra", 
+      "description": "Corte de precisão em diversos materiais metálicos com tecnologia laser de última geração.",
+      "materials": ["Inox", "Aço Carbono", "Alumínio"]
+    },
+    { 
+      "id": "welding-bending",
+      "name": "Solda & Dobra",
+      "title": "Solda & Dobra", 
+      "description": "Serviços de soldagem e dobra para fabricação de peças e estruturas metálicas.",
+      "materials": ["Inox", "Aço Carbono", "Alumínio"]
+    },
+    { 
+      "id": "fabrication",
+      "name": "Fabricação de Peças",
+      "title": "Fabricação de peças", 
+      "description": "Fabricação customizada de peças metálicas sob medida para diversos segmentos industriais.",
+      "materials": ["Inox", "Aço Carbono", "Alumínio"]
+    }
+  ],
+  "products": [
+    { "name": "Grades & Ralos Inox", "category": "residencial" },
+    { "name": "Chapas cortadas CNC", "category": "industrial" },
+    { "name": "Peças dobradas", "category": "industrial" },
+    { "name": "Corrimões & Guarda-corpos", "category": "residencial" },
+    { "name": "Letreiros / Displays", "category": "comercial" },
+    { "name": "Componentes sob medida", "category": "industrial" }
+  ],
+  "contact": {
+    "title": "Contato",
+    "intro": "Fale conosco para orçamentos e dúvidas.",
+    "mailtoSubject": "Contato via site",
+    "whatsappText": "Olá, gostaria de um orçamento."
+  }
+}

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { StoreProvider } from '@/lib/store';
 import { Carousel } from '@/components/Carousel';
 import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
 import Institucional from '@/sections/Institucional';
 import Servicos from '@/sections/Servicos';
 import Produtos from '@/sections/Produtos';
@@ -31,8 +30,7 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         <Header onQuoteClick={() => handleQuoteClick()} />
         <main>
-          <Carousel />
-          <HeroSection onQuoteClick={() => handleQuoteClick()} />
+          <Carousel onQuoteClick={() => handleQuoteClick()} />
           <Institucional />
           <Servicos onQuoteClick={handleQuoteClick} />
           <Produtos onQuoteClick={handleQuoteClick} />

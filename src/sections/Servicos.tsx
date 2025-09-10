@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useStore } from '@/lib/store';
 import { Zap, Wrench, Cog, ArrowRight } from 'lucide-react';
+import siteContent from '@/content/site.json';
 
 interface ServicosProps {
   onQuoteClick: (service: string) => void;
@@ -15,10 +15,10 @@ const serviceIcons = {
 };
 
 export default function Servicos({ onQuoteClick }: ServicosProps) {
-  const { services } = useStore();
+  const services = siteContent.services;
 
   return (
-    <section id="servicos" className="section-spacing bg-gradient-metal">
+    <section id="servicos" className="section-spacing bg-gradient-metal scroll-mt-24">
       <div className="container-industrial">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useStore } from '@/lib/store';
 import { Phone, Mail, MessageCircle, Calculator } from 'lucide-react';
+import siteContent from '@/content/site.json';
 
 interface HeaderProps {
   onQuoteClick: () => void;
@@ -10,6 +11,7 @@ interface HeaderProps {
 export default function Header({ onQuoteClick }: HeaderProps) {
   const { brand } = useStore();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,29 @@ export default function Header({ onQuoteClick }: HeaderProps) {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observerOptions = {
+      rootMargin: '-40% 0px -55% 0px',
+      threshold: 0.01,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    siteContent.navigation.items.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -41,6 +66,23 @@ export default function Header({ onQuoteClick }: HeaderProps) {
               </p>
             </div>
           </div>
+
+          {/* Navigation Menu */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {siteContent.navigation.items.map((item) => (
+              <a
+                key={item.id}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === item.id
+                    ? 'text-primary bg-primary/5 px-3 py-1 rounded-full'
+                    : 'text-foreground/80 hover:text-primary'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
           {/* Contact Info - Hidden on mobile */}
           <div className="hidden lg:flex items-center space-x-6 text-sm">
