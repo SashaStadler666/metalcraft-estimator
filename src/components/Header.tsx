@@ -2,16 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useStore } from '@/lib/store';
 import { Phone, Mail, MessageCircle, Calculator } from 'lucide-react';
-import siteContent from '@/content/site.json';
+import { NavLink } from 'react-router-dom';
 
 interface HeaderProps {
   onQuoteClick: () => void;
 }
 
+const navigationLinks = [
+  { to: "/", label: "Home" },
+  { to: "/institucional", label: "Institucional" },
+  { to: "/servicos", label: "Serviços" },
+  { to: "/produtos", label: "Produtos" },
+  { to: "/contato", label: "Contato" }
+];
+
 export default function Header({ onQuoteClick }: HeaderProps) {
   const { brand } = useStore();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,28 +29,6 @@ export default function Header({ onQuoteClick }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const observerOptions = {
-      rootMargin: '-40% 0px -55% 0px',
-      threshold: 0.01,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, observerOptions);
-
-    // Observe all sections
-    siteContent.navigation.items.forEach((item) => {
-      const element = document.getElementById(item.id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <header 
@@ -69,18 +54,20 @@ export default function Header({ onQuoteClick }: HeaderProps) {
 
           {/* Navigation Menu */}
           <nav className="hidden md:flex items-center space-x-8">
-            {siteContent.navigation.items.map((item) => (
-              <a
-                key={item.id}
-                href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  activeSection === item.id
-                    ? 'text-primary bg-primary/5 px-3 py-1 rounded-full'
-                    : 'text-foreground/80 hover:text-primary'
-                }`}
+            {navigationLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) => 
+                  `text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'text-primary bg-primary/5 px-3 py-1 rounded-full'
+                      : 'text-foreground/80 hover:text-primary'
+                  }`
+                }
               >
-                {item.label}
-              </a>
+                {link.label}
+              </NavLink>
             ))}
           </nav>
 
@@ -114,7 +101,7 @@ export default function Header({ onQuoteClick }: HeaderProps) {
               asChild
             >
               <a 
-                href={`https://wa.me/${brand.whatsappNumber}?text=${encodeURIComponent('Olá, gostaria de mais informações sobre seus serviços.')}`}
+                href={`https://wa.me/5541988511192?text=${encodeURIComponent('Olá, gostaria de mais informações sobre seus serviços.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

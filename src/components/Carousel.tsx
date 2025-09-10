@@ -1,6 +1,38 @@
 import * as React from "react"
-import siteContent from '@/content/site.json'
 import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
+
+interface Slide {
+  title: string;
+  subtitle: string;
+  cta: {
+    label: string;
+    href: string;
+    variant: "primary" | "secondary";
+  } | null;
+  image?: string | null;
+}
+
+const slides: Slide[] = [
+  {
+    title: "Corte a laser de precisão",
+    subtitle: "Inox, carbono e alumínio com repetibilidade CNC.",
+    cta: { label: "Solicitar orçamento", href: "/contato", variant: "primary" },
+    image: null
+  },
+  {
+    title: "Solda & Dobra profissionais",
+    subtitle: "Estruturas duráveis e acabamento superior.",
+    cta: { label: "Ver serviços", href: "/servicos", variant: "secondary" },
+    image: null
+  },
+  {
+    title: "Fabricação sob medida",
+    subtitle: "Do esboço ao produto final, com inspeção dimensional.",
+    cta: { label: "Produtos", href: "/produtos", variant: "secondary" },
+    image: null
+  }
+];
 
 interface CarouselProps {
   onQuoteClick?: () => void;
@@ -8,7 +40,6 @@ interface CarouselProps {
 
 export function Carousel({ onQuoteClick }: CarouselProps) {
   const [idx, setIdx] = React.useState(0)
-  const slides = siteContent.slides
   const total = slides.length
   const go = (n: number) => setIdx((p) => (n + total) % total)
   const next = () => go(idx + 1)
@@ -69,9 +100,9 @@ export function Carousel({ onQuoteClick }: CarouselProps) {
                           asChild
                           className="text-lg px-8 py-4 h-auto"
                         >
-                          <a href={slide.cta.href}>
+                          <Link to={slide.cta.href}>
                             {slide.cta.label}
-                          </a>
+                          </Link>
                         </Button>
                       )}
                       <Button
@@ -81,7 +112,7 @@ export function Carousel({ onQuoteClick }: CarouselProps) {
                         className="text-lg px-8 py-4 h-auto"
                       >
                         <a
-                          href={`https://wa.me/${siteContent.brand.whatsapp}?text=${encodeURIComponent(siteContent.contact.whatsappText)}`}
+                          href="https://wa.me/5541988511192?text=Olá,%20gostaria%20de%20um%20orçamento."
                           target="_blank"
                           rel="noreferrer"
                         >
