@@ -1,0 +1,187 @@
+[1mdiff --git a/pages/index.html b/pages/index.html[m
+[1mindex cc90144..713bc3a 100644[m
+[1m--- a/pages/index.html[m
+[1m+++ b/pages/index.html[m
+[36m@@ -144,64 +144,68 @@[m
+     </section>[m
+ [m
+     <!-- Footer -->[m
+[31m-    <<footer class="bg-dark-blue text-white py-5">[m
+[31m-    <div class="container">[m
+[31m-        <div class="row">[m
+[31m-            <div class="col-lg-3 mb-4">[m
+[31m-                <h5 class="fw-bold">JJ GANS METALS</h5>[m
+[31m-                <p>Soluções em metais de alta precisão desde 2008</p>[m
+[31m-                <div class="d-flex flex-column">[m
+[31m-                    <span><i class="fas fa-map-marker-alt me-2"></i> Av. Principal, 1234</span>[m
+[31m-                    <span>Campo Largo - PR</span>[m
+[31m-                    <span>CEP: 83605-000</span>[m
+[32m+[m[32m    <footer class="bg-dark-blue text-white py-5">[m
+[32m+[m[32m        <div class="container">[m
+[32m+[m[32m            <div class="row">[m
+[32m+[m[32m                <div class="col-lg-3 mb-4">[m
+[32m+[m[32m                    <h5 class="fw-bold">JJ GANS METALS</h5>[m
+[32m+[m[32m                    <p>Soluções em metais de alta precisão desde 2008</p>[m
+[32m+[m[32m                    <div class="d-flex flex-column">[m
+[32m+[m[32m                        <span><i class="fas fa-map-marker-alt me-2"></i> Av. Principal, 1234</span>[m
+[32m+[m[32m                        <span>Campo Largo - PR</span>[m
+[32m+[m[32m                        <span>CEP: 83605-000</span>[m
+[32m+[m[32m                    </div>[m
+                 </div>[m
+[31m-            </div>[m
+[31m-            [m
+[31m-            <div class="col-lg-3 mb-4">[m
+[31m-                <h5 class="fw-bold">Contato</h5>[m
+[31m-                <div class="d-flex flex-column">[m
+[31m-                    <span><i class="fas fa-phone me-2"></i> (41) 9999-9999</span>[m
+[31m-                    <span><i class="fas fa-whatsapp me-2"></i> (41) 99999-9999</span>[m
+[31m-                    <span><i class="fas fa-envelope me-2"></i> contato@jjgansmetais.com.br</span>[m
+[32m+[m[41m                [m
+[32m+[m[32m                <div class="col-lg-3 mb-4">[m
+[32m+[m[32m                    <h5 class="fw-bold">Contato</h5>[m
+[32m+[m[32m                    <div class="d-flex flex-column">[m
+[32m+[m[32m                        <span><i class="fas fa-phone me-2"></i> (41) 9999-9999</span>[m
+[32m+[m[32m                        <span><i class="fas fa-whatsapp me-2"></i> (41) 99999-9999</span>[m
+[32m+[m[32m                        <span><i class="fas fa-envelope me-2"></i> contato@jjgansmetais.com.br</span>[m
+[32m+[m[32m                    </div>[m
+                 </div>[m
+[31m-            </div>[m
+[31m-            [m
+[31m-            <div class="col-lg-3 mb-4">[m
+[31m-                <h5 class="fw-bold">Links Rápidos</h5>[m
+[31m-                <div class="d-flex flex-column">[m
+[31m-                    <a href="index.html" class="text-white mb-2">Home</a>[m
+[31m-                    <a href="sobre.html" class="text-white mb-2">Sobre Nós</a>[m
+[31m-                    <a href="servicos.html" class="text-white mb-2">Serviços</a>[m
+[31m-                    <a href="produtos.html" class="text-white mb-2">Produtos</a>[m
+[31m-                    <a href="contato.html" class="text-white mb-2">Contato</a>[m
+[32m+[m[41m                [m
+[32m+[m[32m                <div class="col-lg-3 mb-4">[m
+[32m+[m[32m                    <h5 class="fw-bold">Links Rápidos</h5>[m
+[32m+[m[32m                    <div class="d-flex flex-column">[m
+[32m+[m[32m                        <a href="index.html" class="text-white mb-2">Home</a>[m
+[32m+[m[32m                        <a href="sobre.html" class="text-white mb-2">Sobre Nós</a>[m
+[32m+[m[32m                        <a href="servicos.html" class="text-white mb-2">Serviços</a>[m
+[32m+[m[32m                        <a href="produtos.html" class="text-white mb-2">Produtos</a>[m
+[32m+[m[32m                        <a href="contato.html" class="text-white mb-2">Contato</a>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                <div class="col-lg-3 mb-4">[m
+[32m+[m[32m                    <h5 class="fw-bold">Horário</h5>[m
+[32m+[m[32m                    <div class="d-flex flex-column">[m
+[32m+[m[32m                        <span>Segunda a Sexta: 8h às 18h</span>[m
+[32m+[m[32m                        <span>Sábado: 8h às 12h</span>[m
+[32m+[m[32m                        <span>Domingo: Fechado</span>[m
+[32m+[m[32m                    </div>[m
+                 </div>[m
+             </div>[m
+             [m
+[31m-            <div class="col-lg-3 mb-4">[m
+[31m-                <h5 class="fw-bold">Horário</h5>[m
+[31m-                <div class="d-flex flex-column">[m
+[31m-                    <span>Segunda a Sexta: 8h às 18h</span>[m
+[31m-                    <span>Sábado: 8h às 12h</span>[m
+[31m-                    <span>Domingo: Fechado</span>[m
+[32m+[m[32m            <hr class="my-4">[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="row">[m
+[32m+[m[32m                <div class="col-md-6">[m
+[32m+[m[32m                    <p>&copy; 2024 JJ Gans Metais e Serviços. Todos os direitos reservados.</p>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div class="col-md-6 text-md-end">[m
+[32m+[m[32m                    <p>CNPJ: 12.345.678/0001-90</p>[m
+                 </div>[m
+             </div>[m
+         </div>[m
+[31m-        [m
+[31m-        <hr class="my-4">[m
+[31m-        [m
+[31m-        <div class="row">[m
+[31m-            <div class="col-md-6">[m
+[31m-                <p>&copy; 2024 JJ Gans Metais e Serviços. Todos os direitos reservados.</p>[m
+[31m-            </div>[m
+[31m-            <div class="col-md-6 text-md-end">[m
+[31m-                <p>CNPJ: 12.345.678/0001-90</p>[m
+[31m-            </div>[m
+[31m-        </div>[m
+[31m-    </div>[m
+[31m-</footer>[m
+[32m+[m[32m    </footer>[m
+[32m+[m
+[32m+[m[32m    <!-- WhatsApp Flutuante -->[m
+[32m+[m[32m    <a href="https://wa.me/5541999999999?text=Olá! Gostaria de um orçamento"[m[41m [m
+[32m+[m[32m       class="whatsapp-float" target="_blank">[m
+[32m+[m[32m        <i class="fab fa-whatsapp"></i>[m
+[32m+[m[32m    </a>[m
+ [m
+[31m-<!-- WhatsApp Flutuante -->[m
+[31m-<a href="https://wa.me/5541999999999?text=Olá! Gostaria de um orçamento" [m
+[31m-   class="whatsapp-float" target="_blank">[m
+[31m-    <i class="fab fa-whatsapp"></i>[m
+[31m-</a>[m
+\ No newline at end of file[m
+[32m+[m[32m    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/styles/styles.css b/styles/styles.css[m
+[1mindex c23e9c9..944c6f7 100644[m
+[1m--- a/styles/styles.css[m
+[1m+++ b/styles/styles.css[m
+[36m@@ -187,47 +187,6 @@[m [mfooter a:hover {[m
+     color: var(--vermelho) !important;[m
+ }[m
+ [m
+[31m-/* Responsividade */[m
+[31m-@media (max-width: 768px) {[m
+[31m-    .carousel-item {[m
+[31m-        height: 400px;[m
+[31m-    }[m
+[31m-    [m
+[31m-    .carousel-caption h2 {[m
+[31m-        font-size: 2rem;[m
+[31m-    }[m
+[31m-    [m
+[31m-    .carousel-caption p {[m
+[31m-        font-size: 1rem;[m
+[31m-    }[m
+[31m-    [m
+[31m-    section {[m
+[31m-        padding: 60px 0;[m
+[31m-    }[m
+[31m-    [m
+[31m-    .navbar-nav {[m
+[31m-        text-align: center;[m
+[31m-    }[m
+[31m-    [m
+[31m-    .navbar-nav .nav-link {[m
+[31m-        margin: 0.25rem 0;[m
+[31m-    }[m
+[31m-}[m
+[31m-[m
+[31m-@media (max-width: 576px) {[m
+[31m-    .carousel-item {[m
+[31m-        height: 300px;[m
+[31m-    }[m
+[31m-    [m
+[31m-    .carousel-caption h2 {[m
+[31m-        font-size: 1.5rem;[m
+[31m-    }[m
+[31m-    [m
+[31m-    .btn-lg {[m
+[31m-        padding: 10px 20px;[m
+[31m-        font-size: 0.9rem;[m
+[31m-    }[m
+[31m-}[m
+ /* WhatsApp Flutuante */[m
+ .whatsapp-float {[m
+     position: fixed;[m
+[36m@@ -250,6 +209,7 @@[m [mfooter a:hover {[m
+ }[m
+ [m
+ .whatsapp-float:hover {[m
+[32m+[m[41m   [m
+     transform: scale(1.1);[m
+     background: #128C7E;[m
+     color: white;[m
