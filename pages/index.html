@@ -1,148 +1,191 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JJGans Metais e Serviços | Corte a Laser, Solda e Fabricação de Peças Metálicas</title>
-    <meta name="description" content="JJGans Metais oferece serviços especializados em corte a laser, solda, dobra e fabricação de peças em inox, aço carbono e alumínio. Localizada em Campo Largo - PR." />
+    <title>JJ Gans Metais - Corte a Laser e Soluções em Metais</title>
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link href="../styles/styles.css" rel="stylesheet">
-    <script src="../scripts/script.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <i class="fas fa-industry me-2"></i>
-          JJGans Metais
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sobre.html">Sobre Nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicos.html">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="produtos.html">Produtos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-primary text-white ms-2" href="orcamento.html">
-                <i class="fas fa-clipboard-list me-1"></i>
-                Solicitar Orçamento
-              </a>
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                JJ GANS METALS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-red text-white ms-2" href="orcamento.html">
+                            <i class="fas fa-clipboard-list me-1"></i>
+                            Orçamento
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="row align-items-center min-vh-100">
-          <div class="col-lg-8">
-            <h1 class="display-4 fw-bold text-white mb-4">
-              Soluções em Metais de Alta Precisão
-            </h1>
-            <p class="lead text-white mb-4">
-              Especialistas em corte a laser, solda e fabricação de peças metálicas com qualidade superior e entrega rápida. Mais de 10 anos transformando ideias em realidade.
-            </p>
-            <div class="d-flex gap-3">
-              <a href="orcamento.html" class="btn btn-primary btn-lg">
-                <i class="fas fa-clipboard-list me-2"></i>
-                Solicitar Orçamento
-              </a>
-              <a href="servicos.html" class="btn btn-outline-light btn-lg">
-                <i class="fas fa-cogs me-2"></i>
-                Nossos Serviços
-              </a>
-            </div>
-          </div>
+    <!-- Carrossel -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
         </div>
-      </div>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80" 
+                     class="d-block w-100" alt="Corte a Laser de Precisão">
+                <div class="carousel-caption">
+                    <h2>Corte de Precisão</h2>
+                    <p>Inox, carbono e alumínio com tecnologia laser</p>
+                    <a href="servicos.html" class="btn btn-blue btn-lg">Conheça Nossos Serviços</a>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80" 
+                     class="d-block w-100" alt="Solda Especializada">
+                <div class="carousel-caption">
+                    <h2>Solda Especializada</h2>
+                    <p>Profissionais certificados e qualidade garantida</p>
+                    <a href="servicos.html" class="btn btn-blue btn-lg">Nossos Trabalhos</a>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80" 
+                     class="d-block w-100" alt="Usinagem e Fabricação">
+                <div class="carousel-caption">
+                    <h2>Usinagem e Fabricação</h2>
+                    <p>Peças sob medida com acabamento impecável</p>
+                    <a href="produtos.html" class="btn btn-blue btn-lg">Ver Produtos</a>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Serviços Rápidos -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nossos Serviços</h2>
+                <p class="text-muted">Qualidade e precisão em cada detalhe</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cut fa-3x text-blue mb-3"></i>
+                            <h5 class="card-title">Corte a Laser</h5>
+                            <p class="card-text">Precisão milimétrica em chapas de aço, inox e alumínio</p>
+                            <a href="servicos.html#corte-laser" class="btn btn-outline-blue">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-fire fa-3x text-blue mb-3"></i>
+                            <h5 class="card-title">Solda Especializada</h5>
+                            <p class="card-text">Serviços de solda MIG, TIG e elétrica com qualidade garantida</p>
+                            <a href="servicos.html#solda" class="btn btn-outline-blue">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cogs fa-3x text-blue mb-3"></i>
+                            <h5 class="card-title">Usinagem</h5>
+                            <p class="card-text">Fabricação de peças personalizadas sob medida</p>
+                            <a href="servicos.html#usinagem" class="btn btn-outline-blue">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Services Preview Section -->
-    <section class="py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="display-5 fw-bold">Nossos Principais Serviços</h2>
-          <p class="lead text-muted">Qualidade e precisão em cada detalhe</p>
+    <!-- Chamada para Ação -->
+    <section class="py-5 bg-blue text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Precisa de um orçamento?</h2>
+            <p class="lead mb-4">Solicite agora mesmo um orçamento sem compromisso</p>
+            <a href="orcamento.html" class="btn btn-red btn-lg">
+                <i class="fas fa-clipboard-list me-2"></i>
+                Solicitar Orçamento
+            </a>
         </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-cut fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Corte a Laser</h5>
-                <p class="card-text">Precisão milimétrica em chapas de aço, inox e alumínio com tecnologia de ponta.</p>
-                <a href="servicos.html#corte-laser" class="btn btn-outline-primary">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-fire fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Solda Especializada</h5>
-                <p class="card-text">Serviços de solda MIG, TIG e elétrica com qualidade garantida e profissionais certificados.</p>
-                <a href="servicos.html#solda" class="btn btn-outline-primary">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Usinagem</h5>
-                <p class="card-text">Fabricação de peças personalizadas sob medida com acabamento impecável.</p>
-                <a href="servicos.html#usinagem" class="btn btn-outline-primary">Saiba Mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5">
-          <a href="servicos.html" class="btn btn-primary btn-lg">
-            <i class="fas fa-eye me-2"></i>
-            Ver Todos os Serviços
-          </a>
-        </div>
-      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>&copy; 2024 JJGans Metais e Serviços. Todos os direitos reservados.</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <p>Campo Largo - PR | (41) 99999-9999</p>
-          </div>
+    <footer class="bg-dark-blue text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">JJ GANS METALS</h5>
+                    <p>Soluções em metais de alta precisão desde 2008</p>
+                    <div class="d-flex flex-column">
+                        <span><i class="fas fa-map-marker-alt me-2"></i> Campo Largo - PR</span>
+                        <span><i class="fas fa-phone me-2"></i> (41) 99999-9999</span>
+                        <span><i class="fas fa-envelope me-2"></i> contato@jjgansmetais.com.br</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">Links Rápidos</h5>
+                    <div class="d-flex flex-column">
+                        <a href="index.html" class="text-white mb-2">Home</a>
+                        <a href="sobre.html" class="text-white mb-2">Sobre Nós</a>
+                        <a href="servicos.html" class="text-white mb-2">Serviços</a>
+                        <a href="produtos.html" class="text-white mb-2">Produtos</a>
+                        <a href="contato.html" class="text-white mb-2">Contato</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">Horário de Atendimento</h5>
+                    <div class="d-flex flex-column">
+                        <span>Segunda a Sexta: 8h às 18h</span>
+                        <span>Sábado: 8h às 12h</span>
+                        <span>Domingo: Fechado</span>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="text-center">
+                <p>&copy; 2024 JJ Gans Metais e Serviços. Todos os direitos reservados.</p>
+            </div>
         </div>
-      </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>
