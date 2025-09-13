@@ -58,3 +58,38 @@ body {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-left: 4px solid #667eea;
 }
+.card-body {
+    padding: 2rem;
+}
+
+/* Texto justificado para conteúdo */
+.card-body p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.card-body .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Diferenciais */
+.text-center .row {
+    margin: 2rem 0;
+}
+
+.text-center .col-md-3 {
+    padding: 1rem;
+}
+
+.text-center h6 {
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.text-center small {
+    color: #666;
+    font-size: 0.9rem;
+}
